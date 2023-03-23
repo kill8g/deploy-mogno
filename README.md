@@ -21,7 +21,7 @@ python deploy.py --close --project test
 
 测试mongo:
 ```shell
-mongo --host 192.168.0.155 --port 3201
+mongo --host 192.168.0.100 --port 3201
 ```
 ```js
 sh.enableSharding("testrs")
