@@ -1,7 +1,9 @@
 # deploy-mongo
 
 部署一套完整的mongo分片服务器
+
 Deploy a complete set of mongo shard servers
+
 - 3 mongos
 - 3 shardsvr, One master and two slaves
 - 1 configsvr, One master and two slaves
