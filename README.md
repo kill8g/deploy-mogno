@@ -1,25 +1,25 @@
 # deploy-mongo
 
 部署一套完整的mongo分片服务器
-包含
-- 3个mongos
-- 3组shardsvr, 一主二从
-- 一组configsvr, 一主二从
+Deploy a complete set of mongo shard servers
+- 3 mongos
+- 3 shardsvr, One master and two slaves
+- 1 configsvr, One master and two slaves
 
-sehema.py 配置信息
-  > configsvr_define configsvr 部署地址
-  > shardsvr_define 部署3组shardsvr, 每一组包含一主二从
-  > mongos_define 部署3个mongos进程
-  > servers linux 服务器的ip, user, pwd
-  > root 项目根目录
+sehema.py 
+  > configsvr_define configsvr : Linux server address configuration information
+  > shardsvr_define : 3 groups of shardsvr, each group is one master and two slaves
+  > mongos_define : Deploy 3 mongos processes
+  > servers linux : linux server ip, port, pwd
+  > root : root path
 
-示例:
-启动分片服务器
+Example:
+start:
 python deploy.py --start --project test
-关闭分片服务器
+close:
 python deploy.py --close --project test
 
-测试mongo:
+test mongo:
 ```shell
 mongo --host 192.168.0.100 --port 3201
 ```
